@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body {
-  font-family: 'Nunito', 'NunitoRegular', sans-serif;
+  font-family: "Nunito", "NunitoRegular", sans-serif;
   color: #333;
   background-color: #d3d3d3;
 }
@@ -26,36 +26,42 @@ body {
 .container-img {
   position: relative;
   width: 100%;
-  max-width: 600px;
+  max-width: 400px;
   overflow: hidden;
+  border-radius: 20px;
+  z-index: 1;
+  margin: 0;
 }
 .container-img img {
   display: block;
   width: 100%;
   height: auto;
+  border-radius: 20px;
 }
+
 .container-texto {
   flex: 1;
   min-width: 300px;
-  
-  padding: 0 40px; 
-  }
-.container-texto h2{
+
+  padding: 0 40px;
+}
+.container-texto h2 {
   font-size: 2.5em;
   margin-top: 0;
   margin-bottom: 10px;
 }
-.subtitulo{
+.subtitulo {
   font-size: 1em;
   font-weight: 500;
   margin-bottom: 40px;
-}.descricao{
+}
+.descricao {
   font-size: 1em;
-  
+
   line-height: 1.5;
   margin-bottom: 30px;
 }
-.botao{
+.botao {
   display: inline-block;
   background-color: #ff7020;
   color: #000;
@@ -65,9 +71,25 @@ body {
   font-weight: normal;
   transition: background-color 0.3s;
   font-size: 1.2rem;
-
 }
-.botao:hover{
+.botao:hover {
   background-color: #f59a66;
-  
+}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 0;
+  }
+  .container-img {
+    max-height: 100%;
+    margin-bottom: 20px;
+  }
+  .container-texto {
+    min-height: unset;
+    padding: 0 20px;
+    max-width: 100%;
+  }
+  .subtitulo {
+    margin-bottom: 20px;
+  }
 }
